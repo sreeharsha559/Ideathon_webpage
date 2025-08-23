@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+  <!-- Google Font (optional but nice) -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Your global glass theme -->
+<link rel="stylesheet" href="glass.css">
+
+</head>
+<body>
+  <h1 style="color: azure;">Admin Dashboard</h1>
+
+  <!-- Logout -->
+  <button id="logoutBtn">Logout</button>
+
+  <!-- Register Team -->
+  <h2 style="color: azure;">Register Team</h2>
+  <input type="text" id="teamName" placeholder="Team Name">
+  <input type="text" id="teamMembers" placeholder="Members (comma separated)">
+  <button id="registerTeamBtn">Register</button>
+
+  <!-- Upload PPT Link -->
+  <h2 style="color: azure;">Upload PPT Link</h2>
+    <label for="teamSelect">Select Team:</label>
+<select id="teamSelect"></select>
+<br><br>
+  <input type="text" id="pptLink" placeholder="Paste Google Drive Link">
+  <button id="savePptBtn">Save PPT Link</button>
+
+
+
+  <!-- Open PPT & Timer -->
+  <h2 style="color: aliceblue;">Presentation Controls</h2>
+  <button id="openPptBtn">Open PPT</button>
+  <p id="timerDisplay">7:00</p>
+  <button id="startTimerBtn">Start Timer</button>
+  <button id="stopTimerBtn">Stop Timer</button>
+  
+
+  
+
+
+  <!-- Firebase SDK -->
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
+
+

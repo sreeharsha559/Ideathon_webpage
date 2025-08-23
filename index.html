@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideathon Login</title>
+  <link rel="stylesheet" href="style5.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="glass.css">
+  <style>
+    /* body{
+      background-image: url("bg.jpg");
+      background-size: cover;
+    } */
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header-container">
+    <div class="header-card">
+      <h1 class="college-name">KUPPAM ENGINEERING COLLEGE</h1>
+      <h2 class="event-title">ANTHARIKSHA 2K25</h2>
+      <h3 class="ideathon-text">IDEATHON</h3>
+      <h3 class="ideathon-text1">PROUDLY ORGANIZED BY CSE DEPARTMENT</h3>
+    </div>
+  </div>
+
+  <!-- Login Form -->
+  <div class="login-container">
+    <h2>Ideathon Login</h2>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button id="loginBtn">
+      <span id="btnText">Login</span>
+      <div class="loader" id="btnLoader"></div>
+    </button>
+    <p id="roleDisplay"></p>
+  </div>
+
+  <!-- Firebase Scripts -->
+  <script type="module" src="script5.js"></script>
+</body>
+</html>

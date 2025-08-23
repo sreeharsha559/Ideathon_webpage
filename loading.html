@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #273C57, #444D61,#709C7F);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .loader-container {
+      text-align: center;
+    }
+
+    /* Bulb shape */
+    .bulb {
+      position: relative;
+      width: 80px;
+      height: 120px;
+      margin: auto;
+    }
+
+    .bulb-top {
+      width: 60px;
+      height: 60px;
+      background: #9FACBD;
+      border-radius: 50%;
+      margin: auto;
+      position: relative;
+      transition: background 2s ease-in-out;
+    }
+
+    .bulb-glow {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 230, 150, 0.9), rgba(255, 230, 150, 0));
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+
+    .bulb-base {
+      width: 30px;
+      height: 40px;
+      background: #10394A;
+      margin: auto;
+      border-radius: 5px;
+      position: relative;
+      top: -10px;
+    }
+
+    .loading-text {
+      margin-top: 20px;
+      font-size: 18px;
+      color: rgb(50, 50, 70);
+      font-weight: bold;
+    }
+
+    /* Active (ON) state */
+    .on .bulb-top {
+      background: #ffe68f;
+    }
+
+    .on .bulb-glow {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-container">
+    <div class="bulb">
+      <div class="bulb-top"></div>
+      <div class="bulb-glow"></div>
+      <div class="bulb-base"></div>
+    </div>
+    <p class="loading-text" style="background: #22C1C3;
+background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);">Every great idea starts with a spark — light yours today</p>
+  </div>
+
+  <script>
+    // Add "on" class after a short delay → bulb turns on
+    setTimeout(() => {
+      document.querySelector(".bulb").classList.add("on");
+    }, 2000 );
+
+    // Redirect to login after 3 seconds
+    setTimeout(() => {
+      window.location.href = "index.html"; // replace with your login page
+    }, 6000);
+  </script>
+</body>
+</html>

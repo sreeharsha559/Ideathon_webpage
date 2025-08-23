@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Judge Dashboard</title>
+  <link rel="stylesheet" href="style.css"> <!-- same theme css -->
+    <!-- Google Font (optional but nice) -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Your global glass theme -->
+<link rel="stylesheet" href="glass.css">
+</head>
+<body>
+  <div class="container">
+    <h1 style="color: antiquewhite;">Judge Panel</h1>
+    <button id="logoutBtn">Logout</button>
+
+    <!-- Select Team -->
+    <div class="card">
+      <h2 style="color: antiquewhite;">Give Score</h2>
+      <select id="teamSelect">
+        <option value="" style="color: antiquewhite;">-- Select Team --</option>
+      </select>
+      <input type="number" id="scoreInput" min="0" max="10" placeholder="Enter score (0-10)">
+      <button id="saveScoreBtn">Save Score</button>
+    </div>
+
+    <!-- Leaderboard -->
+    <div class="card">
+      <h2 style="color: antiquewhite;">Leaderboard</h2>
+      <ul id="leaderboard" style="color: orangered;"></ul>
+    </div>
+  </div>
+
+  <script type="module" src="judge.js"></script>
+</body>
+</html>

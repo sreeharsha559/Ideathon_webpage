@@ -1,0 +1,115 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: url("bg.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Header */
+.header-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.college-name {
+  color: orangered;
+  font-size: clamp(18px, 4vw, 32px);
+}
+
+.event-title {
+  color: white;
+  font-size: clamp(16px, 3.5vw, 28px);
+}
+
+.ideathon-text {
+  color: white;
+  font-size: clamp(14px, 3vw, 24px);
+}
+
+.ideathon-text1 {
+  color: green;
+  font-size: clamp(12px, 2.5vw, 20px);
+}
+
+/* Login Box */
+.login-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.2);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: clamp(18px, 4vw, 26px);
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+#loginBtn {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1c64f2, #6f42c1);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#loginBtn:hover {
+  transform: scale(1.05);
+}
+
+.loader {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  margin: auto;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px 15px;
+  }
+  #loginBtn {
+    font-size: 16px;
+  }
+}
