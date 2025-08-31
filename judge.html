@@ -14,24 +14,56 @@
 <body>
   <div class="container">
     <h1 style="color: antiquewhite;">Judge Panel</h1>
-    <button id="logoutBtn">Logout</button>
-
+    <button id="logoutBtn" style="margin-bottom: 20px;">Logout</button>
+  <section class="card" style="margin-bottom: 20px;">
+  <h2 style="margin:0 0 8px;">Score Teams</h2>
+  <p style="margin:0 0 16px; color: white;" >Enter a score (0–10) for each team and click Save.</p>
+  <div id="judgeTeams" class="grid"></div>
+</section>
     <!-- Select Team -->
     <div class="card">
-      <h2 style="color: antiquewhite;">Give Score</h2>
-      <select id="teamSelect">
-        <option value="" style="color: antiquewhite;">-- Select Team --</option>
-      </select>
-      <input type="number" id="scoreInput" min="0" max="10" placeholder="Enter score (0-10)">
+      <h2 style="color: azure;">Score Card</h2>
+      <select id="teamSelect" style="color: black;background-color: beige;">
+        <option value="" style="color: black;">-- Select Team --</option>
+      </select> <P style="color: white;">PLEASE ENTER SCORE &#128071;</P>  
+      <input type="number" id="scoreInput" min="0" max="10" placeholder="Enter score (0-10)" style="color: black; width: 170px; height: 30px;">
       <button id="saveScoreBtn">Save Score</button>
     </div>
 
     <!-- Leaderboard -->
-    <div class="card">
+    <!-- <div class="card">
       <h2 style="color: antiquewhite;">Leaderboard</h2>
       <ul id="leaderboard" style="color: orangered;"></ul>
-    </div>
+    </div> -->
   </div>
+
+
+<!-- ===== Leaderboard Section ===== -->
+<section class="card" style="margin-top: 24px;">
+  <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;">
+    <h2 style="margin:0;">Leaderboard</h2>
+    <button id="downloadExcelBtn" class="btn" style="background-color: green;">⬇ Download Excel</button>
+  </div>
+
+  <div class="table-wrap" style="overflow:auto; margin-top:12px;">
+    <!-- <table id="leaderboardTable" style="width:100%; border-collapse: collapse; text-align: left; color: white;">
+      <thead>
+        <tr>
+          <th style="padding:10px; border-bottom:1px solid #ddd; color: white;">Rank</th>
+          <th style="padding:10px; border-bottom:1px solid #ddd; color: white;">Team ID</th>
+          <th style="padding:10px; border-bottom:1px solid #ddd; color: white;">Team Name</th>
+          <th style="padding:10px; border-bottom:1px solid #ddd; color: white;">Total Marks</th>
+          <th style="padding:10px; border-bottom:1px solid #ddd; color: white;">Duration</th>
+          
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table> -->
+  </div>
+</section>
+
+<!-- SheetJS (Excel) -->
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
   <script type="module" src="judge.js"></script>
 </body>

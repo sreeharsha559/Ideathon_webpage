@@ -41,6 +41,31 @@
   <button id="startTimerBtn">Start Timer</button>
   <button id="stopTimerBtn">Stop Timer</button>
   
+<!-- ===== Leaderboard Section ===== -->
+<section class="card" style="margin-top: 24px;">
+  <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;">
+    <h2 style="margin:0;">Leaderboard</h2>
+    <button id="downloadExcelBtn" class="btn">⬇ Download Excel</button>
+  </div>
+
+  <div class="table-wrap" style="overflow:auto; margin-top:12px;">
+    <table id="leaderboardTable" style="width:100%; border-collapse: collapse; text-align: left;">
+      <thead>
+        <tr>
+          <th style="padding:10px; border-bottom:1px solid #ddd; color: white;" >Rank</th>
+          <th style="padding:10px; border-bottom:1px solid #ddd; color: white;">Team ID</th>
+          <th style="padding:10px; border-bottom:1px solid #ddd; color: white;">Team Name</th>
+          <th style="padding:10px; border-bottom:1px solid #ddd; color: white;">Duration</th>
+          <th style="padding:10px; border-bottom:1px solid #ddd; color: white;">Total Marks</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- SheetJS (Excel) -->
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
   
 
