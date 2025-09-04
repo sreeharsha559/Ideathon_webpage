@@ -58,8 +58,8 @@ document.getElementById("saveScoreBtn").addEventListener("click", async () => {
   const teamId = document.getElementById("teamSelect").value;
   const score = parseInt(document.getElementById("scoreInput").value);
 
-  if (!teamId || isNaN(score) || score < 0 || score > 10) {
-    alert("⚠️ Please select a team and enter a valid score (0–10).");
+  if (!teamId || isNaN(score) || score < 0 || score > 50) {
+    alert("⚠️ Please select a team and enter a valid score (0–50).");
     return;
   }
 
